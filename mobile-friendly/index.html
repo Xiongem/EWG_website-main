@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
+    <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
+    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.webp"> 
+    <meta property="og:url" content="http://www.elsewherewriters.com/index">
+    <title>EWG Home</title>
+    <link rel="stylesheet" href="mf-css/style.css">
+    <link rel="stylesheet" href="mf-css/home.css">
+    <link rel="stylesheet" href="mf-css/progressBar.css">
+    <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+        </div>
+        <div class="nav-bar">
+            <div class="mobileNav" id="mobileNav" onclick="navMenuClick()">
+                <!-- <img src="../images/menu.webp" alt="mobile navigation icon"> -->
+                 <div class="menu-icon-wrapper">
+                    <div id="menu-bar-1" class="menu-bar"></div>
+                    <div id="menu-bar-2" class="menu-bar"></div>
+                    <div id="menu-bar-3" class="menu-bar"></div>
+                 </div>
+            </div>
+            <div class="user" id="user" onclick="userClick()">
+                <!-- <img src="../images/dragon/dragon-0.webp" alt="user profile picture"> -->
+                    <!-- <span class="fa fa-sign-in" id="sign-in"
+                        style="font-size: 50px; color: var(--accent-3); z-index: 2; cursor: pointer;">
+                    </span> -->
+                <a><h2>Login</h2></a>
+            </div>
+        </div>
+        <div class="navMenu slide-right close" id="navMenu">
+            <div class="navContent">
+                <a href="index.html">Home</a>
+                <div class="projects">
+                    <a href="new-project.html">New Project</a>
+                    <a href="projects.html">Projects</a>
+                </div>
+                <a href="announcements.html">Announcements</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+        <div class="userDropdown slide-left" id="userDropdown">
+            <div class="userContent">
+                <a href="#">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                <a href="#">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                <a href="#">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="pb-wrapper">
+        <div class="pb-background">
+            <h1>Project Progress</h1>
+            <div class="progress-bar">
+                <div id="percentage" class="percentage clickable"></div>
+            </div>
+            <div class="progress-info-wrapper">
+                <div id="current" class="progress-info">
+                    <h2>Current:</h2>
+                    <h3>10,000</h3>
+                </div>
+                <div id="daysLeft" class="progress-info">
+                    <h2>Days Left:</h2>
+                    <h3>Some</h3>
+                </div>
+                <div id="dailyGoal" class="progress-info">
+                    <h2>Daily Goal:</h2>
+                    <h3>100</h3>
+                </div>
+                <div id="goal" class="progress-info">
+                    <h2>Goal:</h2>
+                    <h3>50,000</h3>
+                </div>
+            </div>
+            <div class="added">
+                <span class="fa fa-gear" id="edit-pb"></span>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="current-project-wrapper"> -->
+        <div class="current-project-container">
+            <div id="area-title">
+                <h1>Your Current Project</h1>
+            </div>
+            <div id="project-img">
+                <img src="../images/genre-covers/placeholder.webp" id="theme-img">
+            </div>
+            <div id="project-title">
+                <h2>Title</h2>
+            </div>
+            <div id="project-summary">
+                <p>Looks like you're not logged in.
+                    <br><br>
+                    Click <a href="#">here</a> to login or sign up!
+                </p>
+            </div>
+        </div>
+    <!-- </div> -->
+    <script>
+        function userClick() {
+            document.getElementById('userDropdown').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
